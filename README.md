@@ -147,10 +147,4 @@ Next steps / TODO
 - [ ] Add requirements.txt / environment.yml if missing.
 - [ ] Add a CI workflow to run notebooks automatically on push/PR (I can generate a GitHub Actions workflow if desired).
 - [ ] Add LICENSE and CONTRIBUTING.md.
-
-Thanks — I prepared this README for you. If you'd like I will:
-- auto-fill the task list by scanning the repository and then commit the README to a new branch (suggested name: `enhance-readme`), or
-- directly update main with this README. 
-
-Tell me which you prefer and provide any specific text you want added to the Completed tasks section (task names, one-line summaries), or paste the output of `ls -R` from the repo and I'll fill the file names automatically.
 ```
