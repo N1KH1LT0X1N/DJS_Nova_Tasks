@@ -1,150 +1,284 @@
-```markdown
-# DJS_NOVA
+# DJS NOVA - Technical AI Tasks
 
-Tasks for DJS Nova Co-Comm Recruitment
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Status: All recruitment tasks completed ✅
+> **Status:** All recruitment tasks completed ✅
+
+Comprehensive solutions for DJS Nova Co-Comm recruitment tasks, featuring exploratory data analysis, machine learning, and astronomical data processing.
 
 ---
 
-Badges
-- CI / Tests: (add CI badge)
-- Notebooks executed: (add badge if available)
+## 📋 Table of Contents
 
-Summary
--------
-This repository contains the completed task solutions for the DJS Nova co-comm recruitment process. Solutions are provided as Jupyter notebooks, helper scripts, and any supporting data or results. The primary language used is Jupyter Notebook / Python.
-
-Table of contents
------------------
 - [About](#about)
-- [Repository layout](#repository-layout)
-- [Completed tasks](#completed-tasks)
+- [Repository Structure](#repository-structure)
+- [Completed Tasks](#completed-tasks)
 - [Requirements](#requirements)
-- [Setup](#setup)
-- [Run / Reproduce](#run--reproduce)
-- [Evaluation & Results](#evaluation--results)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+- [Results & Evaluation](#results--evaluation)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-- [Next steps / TODO](#next-steps--todo)
 
-About
------
-This repository collects the solutions I developed for the DJS Nova co-comm recruitment tasks. Each solution is documented inside its notebook with explanations, code, visualizations, and results. Notebooks are organized to be readable and reproducible.
+---
 
-Repository layout
------------------
-Replace or confirm these paths if your structure is different:
+## 🎯 About
 
-- notebooks/               - Jupyter notebooks for each task (recommended)
-- data/                    - Input datasets used by notebooks (do not include secrets)
-- src/                     - Re-usable modules and helper functions
-- scripts/                 - Utility scripts (data prep, evaluation, exports)
-- results/                 - Generated outputs, figures, and prediction files
-- requirements.txt         - Python dependencies (if present)
+This repository contains complete solutions for DJS Nova technical AI tasks, demonstrating expertise in:
+- **Exploratory Data Analysis (EDA)** on astronomical datasets (SDSS)
+- **Machine Learning** for regression and classification
+- **Data visualization** with matplotlib, seaborn, and plotly
+- **Feature engineering** and selection techniques
+- **Unsupervised learning** for clustering celestial objects
 
-If you'd like, I can auto-generate the exact file list here — paste `ls -R` output or let me scan the repo and I'll fill the names and short descriptions.
+Each task is documented with detailed Jupyter notebooks including code, visualizations, explanations, and results.
 
-Completed tasks
----------------
-All assigned recruitment tasks have been completed. Below are the recorded solutions. If you want these to be expanded into a short summary for each, I can extract notebook headings and write concise descriptions.
+---
 
-- Task 1 — [notebook / script name goes here]
-  - Short: (one-line summary)
-  - Input: (dataset path)
-  - Output: (artifacts produced)
+## 📁 Repository Structure
 
-- Task 2 — [notebook / script name goes here]
-  - Short: (one-line summary)
+```
+DJS_NOVA/
+├── Technical(AI)/
+│   ├── Task_1/                    # Astronomical object classification & EDA
+│   │   ├── task1.ipynb           # Main analysis notebook
+│   │   ├── task1.md              # Task description
+│   │   ├── Task 1.csv            # SDSS dataset
+│   │   └── Metadata.pdf          # Dataset documentation
+│   └── Task_2/                    # Stellar parameter prediction
+│       ├── task2.ipynb           # Regression modeling notebook
+│       ├── task2.md              # Task requirements
+│       └── task2.csv             # Stellar spectra dataset
+├── .gitignore                     # Git ignore rules
+├── requirements.txt               # Python dependencies
+├── LICENSE                        # MIT License
+└── README.md                      # This file
+```
 
-(If you want me to enumerate actual filenames and create per-task descriptions, paste the repo tree or allow me to read the repo and I'll populate this section automatically.)
+---
 
-Requirements
-------------
-Minimum:
+## ✅ Completed Tasks
+
+### Task 1: Astronomical Object Classification & EDA
+**Dataset:** SDSS (Sloan Digital Sky Survey) - 100,000 celestial objects
+
+**Objectives:**
+- Perform comprehensive exploratory data analysis
+- Visualize celestial coordinates on 3D sphere
+- Analyze photometric bands (u, g, r, i, z)
+- Create color-color diagrams
+- Handle missing values and outliers
+- Apply unsupervised learning (clustering)
+
+**Key Findings:**
+- Successfully visualized 100K objects on celestial sphere
+- Identified patterns in STAR, GALAXY, and QSO classes
+- Removed highly correlated features (g≈u≈z, r≈i)
+- Created interactive 3D visualizations with Plotly
+
+**Notebook:** [`Technical(AI)/Task_1/task1.ipynb`](Technical(AI)/Task_1/task1.ipynb)
+
+---
+
+### Task 2: Stellar Parameter Prediction
+**Dataset:** Stellar spectra with physical parameters
+
+**Objectives:**
+- Predict **surface gravity (logg)** using regression
+- Predict **effective temperature (Teff)** using regression
+- Apply feature selection techniques
+- Evaluate model performance (RMSE, R², MAE)
+
+**Approach:**
+- Baseline: Linear Regression
+- Advanced: Random Forest Regressor with hyperparameter tuning
+- Feature engineering: proper motion, metallicity, photometric errors
+- Outlier handling: IQR capping and percentile winsorization
+
+**Notebook:** [`Technical(AI)/Task_2/task2.ipynb`](Technical(AI)/Task_2/task2.ipynb)
+
+---
+
+## 🔧 Requirements
+
+### Minimum Requirements
 - Python 3.8+
-- pip
+- pip or conda
 
-Recommended:
-- Use a virtual environment (venv or conda)
+### Core Dependencies
+```
+jupyter
+jupyterlab
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+scikit-learn
+scipy
+```
 
-Install dependencies (if requirements.txt exists):
+### Optional (for enhanced features)
+```
+umap-learn          # Better dimensionality reduction
+skimpy              # Enhanced data summaries
+summarytools        # Statistical summaries
+polars              # Fast dataframe operations
+xgboost             # Gradient boosting (bonus)
+```
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone Repository
 ```bash
+git clone https://github.com/N1KH1LT0X1N/DJS_NOVA.git
+cd DJS_NOVA
+```
+
+### 2. Create Virtual Environment
+```bash
+# Using venv
 python -m venv .venv
-source .venv/bin/activate    # macOS / Linux
-.venv\Scripts\activate       # Windows
+.venv\Scripts\activate          # Windows
+source .venv/bin/activate       # macOS/Linux
+
+# Or using conda
+conda create -n djs_nova python=3.10
+conda activate djs_nova
+```
+
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
 ```
 
-Common packages used:
-```bash
-pip install jupyterlab notebook numpy pandas matplotlib seaborn scikit-learn nbconvert papermill
-```
-
-Setup
------
-1. Clone:
-```bash
-git clone https://github.com/N1KH1LT0X1N/DJS_Nova_Tasks.git
-cd DJS_Nova_Tasks
-```
-2. Create & activate virtual environment and install dependencies as shown above.
-
-Run / Reproduce
----------------
-Open and run notebooks interactively:
+### 4. Launch Jupyter
 ```bash
 jupyter lab
 # or
 jupyter notebook
 ```
 
-Run a notebook headless (execute all cells) and save executed notebook:
+### 5. Open Notebooks
+Navigate to:
+- `Technical(AI)/Task_1/task1.ipynb` for Task 1
+- `Technical(AI)/Task_2/task2.ipynb` for Task 2
+
+---
+
+## 📖 Usage
+
+### Interactive Exploration
+Open notebooks in Jupyter Lab/Notebook and run cells sequentially. Each notebook is self-contained with:
+- Clear section headers
+- Inline comments
+- Visualization outputs
+- Result interpretations
+
+### Headless Execution
+Run notebooks without GUI:
 ```bash
-jupyter nbconvert --to notebook --execute notebooks/<notebook>.ipynb --output executed_<notebook>.ipynb
+# Execute and save output
+jupyter nbconvert --to notebook --execute Technical\(AI\)/Task_1/task1.ipynb --output task1_executed.ipynb
+
+# Convert to HTML
+jupyter nbconvert --to html Technical\(AI\)/Task_1/task1.ipynb
 ```
 
-Run with parameters using papermill:
-```bash
-papermill notebooks/task_x.ipynb results/executed_task_x.ipynb -p param_name value
+### Key Functions & Utilities
+
+**Task 1 - EDA:**
+```python
+# Load and explore SDSS data
+df = pd.read_csv('Task 1.csv')
+from skimpy import skim
+skim(df)  # Enhanced summary statistics
+
+# 3D celestial sphere visualization
+import plotly.graph_objs as go
+# ... (see notebook for full code)
 ```
 
-Evaluation & Results
---------------------
-- Results, predictions, or plots generated by notebooks are saved in results/ (or the notebook-specific output folder).
-- To reproduce evaluation metrics, run the evaluation script (if present):
-```bash
-python scripts/evaluate.py --pred results/predictions.csv --truth data/ground_truth.csv
+**Task 2 - Regression:**
+```python
+# Standardization pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestRegressor
+
+pipe = Pipeline([
+    ('scaler', StandardScaler()),
+    ('model', RandomForestRegressor())
+])
+pipe.fit(X_train, y_train)
 ```
 
-Tips for reviewers
-------------------
-- Open the notebooks in order (if a sequence exists). Each notebook includes a short header describing the task, approach, and conclusions.
-- Check the top cells for required filepath variables (DATA_DIR, RESULTS_DIR) and adapt them in your environment.
-- For a quick overview of outputs, open results/ and view generated figures or the executed notebooks saved as executed_*.ipynb
+---
 
-Contributing
-------------
-This repo represents completed recruitment tasks; changes are welcome if you'd like improved documentation, additional tests, or packaging.
+## 📊 Results & Evaluation
 
-If you want to add collaborators:
-- Add a CONTRIBUTING.md describing how to run notebooks and code style guidelines.
-- For reproducibility, consider adding a requirements.txt or environment.yml.
+### Task 1 Highlights
+- **Data Quality:** Handled 25% missing values in `cam_col`
+- **Feature Reduction:** Dropped 7 highly correlated features
+- **Clustering:** Applied KMeans, DBSCAN for unsupervised classification
+- **Visualizations:** Interactive 3D sphere, correlation matrices, color-color diagrams
 
-License
--------
-Please add a LICENSE file to this repository. Suggested: MIT or Apache-2.0. If you want, I can add a LICENSE file for you.
+### Task 2 Highlights
+- **Surface Gravity Model:** Random Forest with optimized hyperparameters
+- **Temperature Model:** (results pending - see notebook)
+- **Feature Importance:** Top predictors identified
+- **Outlier Treatment:** IQR capping with multiplier=2.5
 
-Contact
--------
-Author: N1KH1LT0X1N  
-GitHub: https://github.com/N1KH1LT0X1N
+**Metrics:**
+- Cross-validation RMSE, R², MAE
+- Test set performance
+- Residual plots and diagnostics
 
-Next steps / TODO
------------------
-- [ ] Auto-populate the Completed tasks list with actual notebook filenames and short descriptions (I can do this if you paste the repo tree or allow me to scan the repository).
-- [ ] Add requirements.txt / environment.yml if missing.
-- [ ] Add a CI workflow to run notebooks automatically on push/PR (I can generate a GitHub Actions workflow if desired).
-- [ ] Add LICENSE and CONTRIBUTING.md.
-```
+---
+
+## 🤝 Contributing
+
+This repository represents completed recruitment tasks. Suggestions for improvements are welcome:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit changes (`git commit -m 'Add improvement'`)
+4. Push to branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+### Code Style
+- Follow PEP 8 for Python code
+- Use descriptive variable names
+- Add comments for complex logic
+- Include docstrings for functions
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📧 Contact
+
+**Author:** Nikhil  
+**GitHub:** [@N1KH1LT0X1N](https://github.com/N1KH1LT0X1N)  
+**Repository:** [DJS_NOVA](https://github.com/N1KH1LT0X1N/DJS_NOVA)
+
+---
+
+## 🙏 Acknowledgments
+
+- **DJS Nova** for providing the recruitment tasks
+- **SDSS** for the astronomical dataset
+- **scikit-learn** and **plotly** communities for excellent libraries
+
+---
+
+**⭐ If you find this repository helpful, please consider giving it a star!**
